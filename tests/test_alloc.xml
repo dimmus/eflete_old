@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2022-11-10 15:05:03</datetime>
+  <suite>
+    <title>alloc_test</title>
+    <test result="success">
+      <path>../tests/test_alloc</path>
+      <fn>mem_malloc.c:55</fn>
+      <id>mem_malloc_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000021</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_alloc</path>
+      <fn>mem_calloc.c:52</fn>
+      <id>mem_calloc_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000017</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.003182</duration>
+</testsuites>

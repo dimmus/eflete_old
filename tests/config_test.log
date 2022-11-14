@@ -1,0 +1,215 @@
+Running suite(s): config_test
+[7;32m============================= config_get_test_p1 ==================================================================[0m
+
+
+ERR<642876>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= config_get_test_p2 ==================================================================[0m
+
+
+ERR<642881>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= config_init_test_p ==================================================================[0m
+
+
+ERR<642886>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= config_load_test_p ==================================================================[0m
+
+
+ERR<642891>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= config_panes_sizes_data_update_test_p ==================================================================[0m
+
+
+ERR<642896>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= config_save_test_p ==================================================================[0m
+
+
+ERR<642901>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+[7;32m============================= config_shutdown_test_p ==================================================================[0m
+
+
+ERR<642906>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= profile_get_test_p2 ==================================================================[0m
+
+
+ERR<642911>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= profile_load_test_p1 ==================================================================[0m
+
+
+ERR<642916>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= profile_load_test_p2 ==================================================================[0m
+
+
+ERR<642921>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= profile_save_test_p ==================================================================[0m
+
+
+ERR<642926>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f83168988ac 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f83168995e1 0x7f831686e000
+/usr/local/lib/libeina.so.1	 0x7f831689a9f5 0x7f831686e000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a80c2 0x55b8205a2000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/config_test	 0x55b8205a86bb 0x55b8205a2000
+/usr/local/lib/libecore.so.1	 0x7f83169285c8 0x7f83168f4000
+/usr/local/lib/libecore.so.1	 0x7f831692871d 0x7f83168f4000
+/usr/local/lib/libeina.so.1	 0x7f83168b19b4 0x7f831686e000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f8316853609 0x7f831684b000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f831661d133 0x7f83164fe000
+EOF
+
+[7;32m============================= profiles_get_test_p ==================================================================[0m
+
+
+100%: Checks: 12, Failures: 0, Errors: 0
+../tests/test_config/config_get.c:54:P:TCase:config_get_test_p1:0: Passed
+../tests/test_config/config_get.c:86:P:TCase:config_get_test_p2:0: Passed
+../tests/test_config/config_init.c:56:P:TCase:config_init_test_p:0: Passed
+../tests/test_config/config_load.c:61:P:TCase:config_load_test_p:0: Passed
+../tests/test_config/config_panes_sizes_data_update.c:63:P:TCase:config_panes_sizes_data_update_test_p:0: Passed
+../tests/test_config/config_save.c:60:P:TCase:config_save_test_p:0: Passed
+../tests/test_config/config_shutdown.c:56:P:TCase:config_shutdown_test_p:0: Passed
+../tests/test_config/profile_get.c:58:P:TCase:profile_get_test_p2:0: Passed
+../tests/test_config/profile_load.c:60:P:TCase:profile_load_test_p1:0: Passed
+../tests/test_config/profile_load.c:95:P:TCase:profile_load_test_p2:0: Passed
+../tests/test_config/profile_save.c:59:P:TCase:profile_save_test_p:0: Passed
+../tests/test_config/profiles_get.c:60:P:TCase:profiles_get_test_p:0: Passed
+PASS config_test (exit status: 0)

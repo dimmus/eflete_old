@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2022-11-10 15:05:03</datetime>
+  <suite>
+    <title>eflete_test</title>
+    <test result="success">
+      <path>../tests/test_eflete</path>
+      <fn>app_init.c:55</fn>
+      <id>app_init_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.053524</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_eflete</path>
+      <fn>app_shutdown.c:58</fn>
+      <id>app_shutdown_test_p1</id>
+      <iteration>0</iteration>
+      <duration>0.075778</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_eflete</path>
+      <fn>app_shutdown.c:89</fn>
+      <id>app_shutdown_test_p2</id>
+      <iteration>0</iteration>
+      <duration>0.057409</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.197279</duration>
+</testsuites>

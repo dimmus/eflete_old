@@ -1,0 +1,11 @@
+Running suite(s): alloc_test
+[7;32m============================= mem_malloc_test_p ==================================================================[0m
+
+
+[7;32m============================= mem_calloc_test_p ==================================================================[0m
+
+
+100%: Checks: 2, Failures: 0, Errors: 0
+../tests/test_alloc/mem_malloc.c:55:P:TCase:mem_malloc_test_p:0: Passed
+../tests/test_alloc/mem_calloc.c:52:P:TCase:mem_calloc_test_p:0: Passed
+PASS alloc_test (exit status: 0)

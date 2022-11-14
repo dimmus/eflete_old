@@ -1,0 +1,31 @@
+Running suite(s): eflete_test
+ERR<642793>: ../../src/bin/external/syntax_color.c:108 color_load() Failed to open color data file "/themes/default/color/color.eet"
+## Copy & Paste the below (until EOF) into a terminal, then hit Enter
+
+eina_btlog << EOF
+/usr/local/lib/libeina.so.1	 0x7f1fca64f8ac 0x7f1fca625000
+/usr/local/lib/libeina.so.1	 0x7f1fca6505e1 0x7f1fca625000
+/usr/local/lib/libeina.so.1	 0x7f1fca6519f5 0x7f1fca625000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/eflete_test	 0x55e4df6fd972 0x55e4df6f8000
+/home/dimmus/dev/eflete/eflete-1.19.1-efl-1.20/tests/eflete_test	 0x55e4df6fdf6b 0x55e4df6f8000
+/usr/local/lib/libecore.so.1	 0x7f1fca6df5c8 0x7f1fca6ab000
+/usr/local/lib/libecore.so.1	 0x7f1fca6df71d 0x7f1fca6ab000
+/usr/local/lib/libeina.so.1	 0x7f1fca6689b4 0x7f1fca625000
+/lib/x86_64-linux-gnu/libpthread.so.0	 0x7f1fca60a609 0x7f1fca602000
+/lib/x86_64-linux-gnu/libc.so.6	 0x7f1fca3d4133 0x7f1fca2b5000
+EOF
+
+[7;32m============================= app_init_test_p ==================================================================[0m
+
+
+[7;32m============================= app_shutdown_test_p1 ==================================================================[0m
+
+
+[7;32m============================= app_shutdown_test_p2 ==================================================================[0m
+
+
+100%: Checks: 3, Failures: 0, Errors: 0
+../tests/test_eflete/app_init.c:55:P:TCase:app_init_test_p:0: Passed
+../tests/test_eflete/app_shutdown.c:58:P:TCase:app_shutdown_test_p1:0: Passed
+../tests/test_eflete/app_shutdown.c:89:P:TCase:app_shutdown_test_p2:0: Passed
+PASS eflete_test (exit status: 0)

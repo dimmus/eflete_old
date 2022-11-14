@@ -1,0 +1,11 @@
+Running suite(s): logger_test
+[7;32m============================= logger_init_test_p ==================================================================[0m
+
+
+[7;32m============================= logger_shutdown_test_p ==================================================================[0m
+
+
+100%: Checks: 2, Failures: 0, Errors: 0
+../tests/test_logger/logger_init.c:56:P:TCase:logger_init_test_p:0: Passed
+../tests/test_logger/logger_shutdown.c:58:P:TCase:logger_shutdown_test_p:0: Passed
+PASS logger_test (exit status: 0)

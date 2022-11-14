@@ -1,0 +1,19 @@
+Running suite(s): change_test
+[7;32m============================= change_add_test_p ==================================================================[0m
+
+
+[7;32m============================= change_free_test_p ==================================================================[0m
+
+
+[7;32m============================= change_diff_add_test_p ==================================================================[0m
+
+
+[7;32m============================= change_diff_merge_add_test_p ==================================================================[0m
+
+
+100%: Checks: 4, Failures: 0, Errors: 0
+../tests/test_change/change_add.c:55:P:TCase:change_add_test_p:0: Passed
+../tests/test_change/change_free.c:51:P:TCase:change_free_test_p:0: Passed
+../tests/test_change/change_diff_add.c:137:P:TCase:change_diff_add_test_p:0: Passed
+../tests/test_change/change_diff_merge_add.c:114:P:TCase:change_diff_merge_add_test_p:0: Passed
+PASS change_test (exit status: 0)

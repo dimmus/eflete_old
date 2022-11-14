@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "test_ewe_ruler.h": "c",
+        "utc_common.h": "c",
+        "eflete.h": "c",
+        "test_cursor.h": "c"
+    }
+}

@@ -1,0 +1,163 @@
+#define IM(NAME, STYLE, IMG, MAX_X_Y, BORDER, FILL, MID) \
+   group { name: "elm/image/"NAME"/"STYLE; \
+      images.image: IMG COMP; \
+      parts { \
+         part { name: "image"; \
+            type: IMAGE; \
+            description { state: "default" 0.0; \
+               max: MAX_X_Y; \
+               image { \
+                  normal: IMG; \
+                  border: BORDER; \
+                  middle: MID; \
+               } \
+               fill.type: FILL; \
+            } \
+         } \
+      } \
+   }
+
+IM("icon",     "rectangle",      "Group contents navigator/group_rectangle_nor.png",      16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "rectangle1",     "Group contents navigator/group_rectangle_sel.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "rectangle2",     "Group contents navigator/group_rectangle_mv.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "image",          "Group contents navigator/group_image_nor.png",          16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "image1",         "Group contents navigator/group_image_sel.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "image2",         "Group contents navigator/group_image_mv.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "spacer",         "Group contents navigator/group_spacer_nor.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "spacer1",        "Group contents navigator/group_spacer_sel.png",        16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "spacer2",        "Group contents navigator/group_spacer_mv.png",        16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "swallow",        "Group contents navigator/group_swallow_nor.png",        16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "swallow1",       "Group contents navigator/group_swallow_sel.png",       16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "swallow2",       "Group contents navigator/group_swallow_mv.png",       16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "text",           "Group contents navigator/group_text_nor.png",           16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "text1",          "Group contents navigator/group_text_sel.png",          16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "text2",          "Group contents navigator/group_text_mv.png",          16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "textblock",      "Group contents navigator/group_t_block_nor.png",      16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "textblock1",     "Group contents navigator/group_t_block_sel.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "textblock2",     "Group contents navigator/group_t_block_mv.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "group",          "Group contents navigator/group_group_nor.png",          16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "group1",         "Group contents navigator/group_group_sel.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "group2",         "Group contents navigator/group_group_mv.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+
+
+IM("icon",     "proxy",          "Group contents navigator/group_proxy_nor.png",          16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "proxy1",         "Group contents navigator/group_proxy_sel.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "proxy2",         "Group contents navigator/group_proxy_mv.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "table",          "Group contents navigator/group_table_nor.png",          16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "table1",         "Group contents navigator/group_table_sel.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "table2",         "Group contents navigator/group_table_mv.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "box",            "Group contents navigator/group_box_nor.png",            16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "box1",           "Group contents navigator/group_box_sel.png",           16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "box2",           "Group contents navigator/group_box_mv.png",           16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "vector",      "Group contents navigator/group_vector_nor.png",      16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "vector1",     "Group contents navigator/group_vector_sel.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "vector2",     "Group contents navigator/group_vector_mv.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "folder",         "Group navigator/view_s_folder_nor.png",         16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "folder1",        "Group navigator/view_s_folder_sel.png",        16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "folder2",        "Group navigator/view_s_folder_mv.png",        16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "file",           "Group navigator/view_s_docu_nor.png",           16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "file1",          "Group navigator/view_s_docu_sel.png",          16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "file2",          "Group navigator/view_s_docu_mv.png",          16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "group_navigator",    "Group contents navigator/view_s_group_nor.png",    16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "group_navigator_sel","Group contents navigator/view_s_group_sel.png",    16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "group_navigator_mv", "Group contents navigator/view_s_group_mv.png",    16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "external",       "Custom/icon-external.png",       12 11,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "logo",    "General/cd_icon.png",    16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "attention",      "Custom/attention.png",           16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "alias_link",     "Group navigator/tool_loop_nor.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "alias_link1",    "Group navigator/tool_loop_sel.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "alias_link2",    "Group navigator/tool_loop_mv.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "alias_link3",    "Group navigator/tool_loop_dim.png",     16 16,   0 0 0 0,    SCALE,   SOLID)
+
+IM("icon",     "start-point",    "Custom/icon_start-point.png",    12 12,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "end-point",      "Custom/icon_end-point.png",      12 12,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "align",          "Custom/icon_align.png",          15 15,   0 0 0 0,    SCALE,   SOLID)
+IM("icon",     "offset",         "Custom/icon_offset.png",         15 15,   0 0 0 0,    SCALE,   SOLID)
+
+IM("bg",       "tile",           "Custom/bg_demo.png",             -1 -1,   0 0 0 0,    TILE,    SOLID)
+IM("bg",       "box",            "Custom/bg_box.png",              -1 -1,   0 0 0 0,    TILE,    SOLID)
+IM("bg",       "proxy",          "Custom/bg_proxy.png",            -1 -1,   0 0 0 0,    TILE,    SOLID)
+IM("bg",       "group",          "Custom/bg_group.png",            -1 -1,   0 0 0 0,    TILE,    SOLID)
+IM("bg",       "table",          "Custom/bg_table.png",            -1 -1,   0 0 0 0,    TILE,    SOLID)
+IM("bg",       "spacer",         "Custom/bg_spacer.png",           -1 -1,   0 0 0 0,    TILE,    SOLID)
+IM("bg",       "swallow",        "Custom/bg_swallow.png",          -1 -1,   0 0 0 0,    TILE,    SOLID)
+IM("bg",       "part_item",      "Custom/bg_part_item.png",        -1 -1,   0 0 0 0,    TILE,    SOLID)
+
+IM("navigator", "project",    "Group contents navigator/view_s_project_icon.png", 16 16,  0 0 0 0,    SCALE,   SOLID)
+IM("navigator", "property",   "Property/pro_property_icon.png", 16 16,  0 0 0 0,    SCALE,   SOLID)
+
+group { name: "elm/image/icon/scale_smaller";
+   parts {
+      part { name: "sizer";
+         type: RECT;
+         description { state: "default" 0.0;
+            visible: 0;
+            max: 15 12;
+         }
+      }
+      part { name: "hor_line";
+         type: RECT;
+         description { state: "default" 0.0;
+            min: 10 2;
+            max: 10 2;
+            color_class: "border";
+         }
+      }
+   }
+}
+
+group { name: "elm/image/icon/scale_larger";
+   parts {
+      part { name: "sizer";
+         type: RECT;
+         description { state: "default" 0.0;
+            visible: 0;
+            min: 26 12;
+            max: 26 12;
+         }
+      }
+      part { name: "hor_line";
+         type: RECT;
+         description { state: "default" 0.0;
+            min: 10 2;
+            max: 10 2;
+            color_class: "border";
+         }
+      }
+      part { name: "ver_line";
+         type: RECT;
+         description { state: "default" 0.0;
+            min: 2 10;
+            max: 2 10;
+            color_class: "border";
+         }
+      }
+   }
+}
+
+group { name: "elm/image/color/color_set";
+   parts {
+      part { name: "image";
+         type: RECT;
+         description { state: "default" 0.0;
+         }
+      }
+   }
+}
+
+

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2022-11-10 15:05:03</datetime>
+  <suite>
+    <title>config_test</title>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>config_get.c:54</fn>
+      <id>config_get_test_p1</id>
+      <iteration>0</iteration>
+      <duration>0.084153</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>config_get.c:86</fn>
+      <id>config_get_test_p2</id>
+      <iteration>0</iteration>
+      <duration>0.069920</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>config_init.c:56</fn>
+      <id>config_init_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.079219</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>config_load.c:61</fn>
+      <id>config_load_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.058765</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>config_panes_sizes_data_update.c:63</fn>
+      <id>config_panes_sizes_data_update_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.055771</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>config_save.c:60</fn>
+      <id>config_save_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.060220</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>config_shutdown.c:56</fn>
+      <id>config_shutdown_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.052011</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>profile_get.c:58</fn>
+      <id>profile_get_test_p2</id>
+      <iteration>0</iteration>
+      <duration>0.059657</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>profile_load.c:60</fn>
+      <id>profile_load_test_p1</id>
+      <iteration>0</iteration>
+      <duration>0.066515</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>profile_load.c:95</fn>
+      <id>profile_load_test_p2</id>
+      <iteration>0</iteration>
+      <duration>0.057397</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>profile_save.c:59</fn>
+      <id>profile_save_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.059744</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_config</path>
+      <fn>profiles_get.c:60</fn>
+      <id>profiles_get_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.055534</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.802645</duration>
+</testsuites>

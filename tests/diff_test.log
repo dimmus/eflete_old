@@ -1,0 +1,19 @@
+Running suite(s): diff_test
+[7;32m============================= diff_undo_redo_test_p1 ==================================================================[0m
+
+
+[7;32m============================= diff_undo_redo_test_p2 ==================================================================[0m
+
+
+[7;32m============================= diff_update_test_p ==================================================================[0m
+
+
+[7;32m============================= diff_free_test_p ==================================================================[0m
+
+
+100%: Checks: 4, Failures: 0, Errors: 0
+../tests/test_diff/diff_undo_redo.c:64:P:TCase:diff_undo_redo_test_p1:0: Passed
+../tests/test_diff/diff_undo_redo.c:134:P:TCase:diff_undo_redo_test_p2:0: Passed
+../tests/test_diff/diff_update.c:90:P:TCase:diff_update_test_p:0: Passed
+../tests/test_diff/diff_free.c:61:P:TCase:diff_free_test_p:0: Passed
+PASS diff_test (exit status: 0)
