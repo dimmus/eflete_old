@@ -132,6 +132,9 @@ group { name: "ewe/scroller/base/default";
             y: 1 1 0;
             confine: "sb_vbar_base";
          }
+         description { state: "clicked" 0.0;
+            inherit: "default" 0.0;
+         }
       }
 // horiz bar /////////////////////////////////////////////////////////////
       part { name: "sb_hbar_show";
@@ -235,6 +238,9 @@ group { name: "ewe/scroller/base/default";
             x: 1 1 0;
             y: 0 0 0;
             confine: "sb_hbar_base";
+         }
+         description { state: "clicked" 0.0;
+            inherit: "default" 0.0;
          }
       }
       part { name: "bg";

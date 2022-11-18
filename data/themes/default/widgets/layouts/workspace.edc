@@ -5,15 +5,27 @@ group { name: "elm/layout/workspace/bg";
          description { state: "default" 0.0;
             color: 255 255 255 0;
          }
+         description { state: "default" 0.5;
+            color: 255 255 255 0;
+         }
          description { state: "black" 0.0;
             color: 0 0 0 255;
          }
-         description { state: "white" 0.0;
+         description { state: "white" 0.5;
          }
       }
       part { name: "bg1";
          type: IMAGE;
          description { state: "default" 0.0;
+            image {
+               normal: "bg_demo.png";
+               middle: DEFAULT;
+            }
+            fill {
+               type: TILE;
+            }
+         }
+         description { state: "default" 0.5;
             image {
                normal: "bg_demo.png";
                middle: DEFAULT;
@@ -32,7 +44,7 @@ group { name: "elm/layout/workspace/bg";
                type: TILE;
             }
          }
-         description { state: "white" 0.0;
+         description { state: "white" 0.5;
             color: 255 255 255 0;
             image {
                normal: "bg_demo.png";

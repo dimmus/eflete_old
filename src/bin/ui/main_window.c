@@ -120,7 +120,8 @@ _after_popup_close(void *data __UNUSED__,
    if (BTN_CANCEL == pbtn) return;
 
 #ifdef HAVE_ENVENTOR
-   code_edit_mode_switch(false);
+   TODO("Needs implementation if ENVENTOR support is enabled");
+   // code_edit_mode_switch(false); 
 #endif
 
    free(ap.menu);
@@ -188,16 +189,14 @@ ui_main_window_add(void)
    evas_object_smart_callback_add(ap.win, signals.shortcut.manager.style, _style_manager, NULL);
    evas_object_smart_callback_add(ap.win, signals.shortcut.manager.script, _script_manager, NULL);
 
-#if 0 // turn off the eflete main cursor, while not used elementary combobox, and not fixed bug with double cursors
    if (!cursor_main_set(ap.win, CURSOR_ARROW))
      {
         ERR("Main cursor not setted.");
         abort();
      }
-#endif /* if 0 */
 
    elm_object_theme_set(ap.win, ap.theme);
-
+   
    bg = elm_bg_add(ap.win);
    elm_win_resize_object_add(ap.win, bg);
    evas_object_size_hint_weight_set(bg, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
@@ -286,6 +285,7 @@ _about_window_content_get(void *data, Evas_Object *popup __UNUSED__, Evas_Object
                              "It is designed to create and modify styles of Elementary widgets.<br>"
                              "<br>"
                              "Copyright (C) 2013 - 2015 Samsung Electronics.<br>"
+                             "Copyright (C) 2022 Enlightenment Development Team.<br>"
                              "<br>"
                              "<align=center><b>Authors:</b><br>");
 
@@ -442,7 +442,7 @@ _shortcut_change_request(void *data,
 }
 
 static void
-_change_shortcut(void *data __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
+_change_shortcut(void *data, Evas_Object *obj, void *event_info __UNUSED__)
 {
    Shortcut_Data *sc = (Shortcut_Data *)data;
    Evas_Object *layout =  evas_object_data_get(obj, "layout");
@@ -455,7 +455,7 @@ _change_shortcut(void *data __UNUSED__, Evas_Object *obj __UNUSED__, void *event
 }
 
 static void
-_reset_shortcut(void *data __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
+_reset_shortcut(void *data __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info)
 {
    Popup_Button btn_res = (Popup_Button) event_info;
    if (btn_res == BTN_RESET)
@@ -465,7 +465,7 @@ _reset_shortcut(void *data __UNUSED__, Evas_Object *obj __UNUSED__, void *event_
 }
 
 static char *
-_label_get(void *data, Evas_Object *obj __UNUSED__, const char *pr __UNUSED__)
+_label_get(void *data, Evas_Object *obj __UNUSED__, const char *pr)
 {
    if (!pr) return strdup(" ");
    if (!strcmp(pr, "combination.text"))
@@ -488,7 +488,7 @@ _label_get(void *data, Evas_Object *obj __UNUSED__, const char *pr __UNUSED__)
 }
 
 static Evas_Object *
-_content_get(void *data __UNUSED__, Evas_Object *obj, const char *pr __UNUSED__)
+_content_get(void *data __UNUSED__, Evas_Object *obj, const char *pr)
 {
    if (!pr) return NULL;
 
@@ -621,7 +621,7 @@ _shortcuts_window_content_get(void *data, Evas_Object *popup __UNUSED__, Evas_Ob
      }
    elm_genlist_item_append(genlist, empty_itc, NULL,
                            popup_group , ELM_GENLIST_ITEM_NONE, NULL, NULL);
-
+   
    evas_object_size_hint_weight_set(genlist, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
    evas_object_size_hint_align_set(genlist, EVAS_HINT_FILL, EVAS_HINT_FILL);
    evas_object_show(genlist);
@@ -642,7 +642,7 @@ shortcuts_window_add(void)
 
    evas_object_size_hint_min_set(content, 400, 460);
 
-   popup = popup_add(_("Help: shortcuts"), NULL,  BTN_OK | BTN_RESET, _shortcuts_window_content_get, content);
+   popup = popup_add(_("Help: shortcuts"), NULL, BTN_OK | BTN_RESET, _shortcuts_window_content_get, content);
    evas_object_smart_callback_add(popup, POPUP_CLOSE_CB, _reset_shortcut, NULL);
    return NULL;
 }

@@ -17,6 +17,10 @@
  * along with this program; If not, see www.gnu.org/licenses/lgpl.html.
  */
 
+#ifdef HAVE_CONFIG_H
+   #include "config.h"
+#endif /* include eflete_config.h */
+
 #include "project_manager2.h"
 #include "enventor_module.h"
 
@@ -65,55 +69,57 @@ enventor_object_init(Evas_Object *parent)
 Eina_Bool
 enventor_object_project_load(Evas_Object *enventor, Project *project)
 {
-  Eina_Stringshare *file = NULL;
-  Eina_Tmpstr *tmpstr = NULL;
-  char **tmp;
-  unsigned int i = 0, tokens_count = 0;
-  Style *style = NULL;
-  Eina_Stringshare *path = NULL;
+   TODO("Needs API update if ENVENTOR support is enabled");
+  // Eina_Stringshare *file = NULL;
+  // Eina_Tmpstr *tmpstr = NULL;
+  // char **tmp;
+  // unsigned int i = 0, tokens_count = 0;
+  // Style *style = NULL;
+  // Eina_Stringshare *path = NULL;
 
-  if ((!enventor) || (!project) || (!project->current_style)) return false;
-  style = project->current_style;
+  // if ((!enventor) || (!project) || (!project->current_style)) return false;
+  // style = project->current_style; // we have no 'current style' in project now
+  // // style = (Style2 *)resource_manager_find(project->RM.styles, tpd->style_name); // wrong try
 
-  if (!project->enventor)
-    project->enventor = (Enventor_Data *)mem_calloc(1, sizeof(Enventor_Data));
+  // if (!project->enventor)
+  //   project->enventor = (Enventor_Data *)mem_calloc(1, sizeof(Enventor_Data));
 
-  if (!project->enventor->file)
-    {
-       /* Prepare edc file and resources for using in enventor mode.
-        * Project will created in temporary directory (linux: "/tmp";
-        * Windows: path of enviroment variables TEMP|TMP|USERPROFILE|WINDIR).
-        * Name of project directory compose by next rule: all terminants "/"
-        * will replaced with "_" and generate unieque id suffix.
-        * For example:
-        * elm/bubble/base/default -> /tmp/elm_bubble_base_default_fGhds1/
-        */
+  // if (!project->enventor->file)
+  //   {
+  //      /* Prepare edc file and resources for using in enventor mode.
+  //       * Project will created in temporary directory (linux: "/tmp";
+  //       * Windows: path of enviroment variables TEMP|TMP|USERPROFILE|WINDIR).
+  //       * Name of project directory compose by next rule: all terminants "/"
+  //       * will replaced with "_" and generate unieque id suffix.
+  //       * For example:
+  //       * elm/bubble/base/default -> /tmp/elm_bubble_base_default_fGhds1/
+  //       */
 
-       tmp = eina_str_split_full(style->full_group_name, "/", 0, &tokens_count);
-       if (!tmp[0]) return false;
-       file = eina_stringshare_add(tmp[0]);
-       for (i = 1; tokens_count - 1 > 0; i++, tokens_count--)
-        file = eina_stringshare_printf("%s_%s", file, tmp[i]);
-       free(tmp[0]);
-       free(tmp);
-       path = eina_stringshare_printf("%s_XXXXXX", file);
-       eina_file_mkdtemp(path, &tmpstr);
-       eina_stringshare_del(path);
+  //      tmp = eina_str_split_full(style->full_group_name, "/", 0, &tokens_count);
+  //      if (!tmp[0]) return false;
+  //      file = eina_stringshare_add(tmp[0]);
+  //      for (i = 1; tokens_count - 1 > 0; i++, tokens_count--)
+  //       file = eina_stringshare_printf("%s_%s", file, tmp[i]);
+  //      free(tmp[0]);
+  //      free(tmp);
+  //      path = eina_stringshare_printf("%s_XXXXXX", file);
+  //      eina_file_mkdtemp(path, &tmpstr);
+  //      eina_stringshare_del(path);
 
-       project->enventor->file = eina_stringshare_printf("%s/%s.edc", tmpstr, file);
-       project->enventor->path = eina_stringshare_add(tmpstr);
+  //      project->enventor->file = eina_stringshare_printf("%s/%s.edc", tmpstr, file);
+  //      project->enventor->path = eina_stringshare_add(tmpstr);
 
-       eina_tmpstr_del(tmpstr);
-    }
+  //      eina_tmpstr_del(tmpstr);
+  //   }
 
-  if (!pm_project_style_source_code_export(project, style, project->enventor->file))
-    ERR("Source code of the current style was not written to the file %s", project->enventor->file);
+  // if (!pm_project_style_source_code_export(project, style, project->enventor->file))
+  //   ERR("Source code of the current style was not written to the file %s", project->enventor->file);
 
-  enventor_object_file_set(enventor, project->enventor->file);
+  // enventor_object_file_set(enventor, project->enventor->file);
 
-  enventor_object_path_set(enventor, ENVENTOR_PATH_TYPE_FONT, project->res.fonts);
-  enventor_object_path_set(enventor, ENVENTOR_PATH_TYPE_IMAGE, project->res.images);
-  enventor_object_path_set(enventor, ENVENTOR_PATH_TYPE_SOUND, project->res.sounds);
+  // enventor_object_path_set(enventor, ENVENTOR_PATH_TYPE_FONT, project->RM.fonts);
+  // enventor_object_path_set(enventor, ENVENTOR_PATH_TYPE_IMAGE, project->RM.images);
+  // enventor_object_path_set(enventor, ENVENTOR_PATH_TYPE_SOUND, project->RM.sounds);
   return true;
 }
 
@@ -159,8 +165,8 @@ enventor_object_file_version_update(Evas_Object *enventor, Project *project, con
    if ((!enventor) || (!project) || (!key))
      return false;
 
-   cursor_pos = enventor_object_cursor_pos_get(enventor);
-   enventor_object_save(enventor, project->enventor->file);
+   cursor_pos = enventor_item_cursor_pos_get(enventor);
+   enventor_item_file_save(enventor, project->enventor->file);
 
    f_size = ecore_file_size(project->enventor->file);
    f = fopen(project->enventor->file, "r+");
@@ -234,8 +240,8 @@ enventor_object_file_version_update(Evas_Object *enventor, Project *project, con
      }
    free(code);
    fclose(f);
-   enventor_object_file_set(enventor, project->enventor->file);
-   enventor_object_cursor_pos_set(enventor, cursor_pos);
+   enventor_item_file_save(enventor, project->enventor->file);
+   enventor_item_cursor_pos_set(enventor, cursor_pos);
    eina_stringshare_del(data_str);
    return true;
 }

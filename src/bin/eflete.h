@@ -90,11 +90,19 @@ TODO("delete it, and remake all strings to eina_stringshare or eina_strbuff")
 #pragma GCC poison elm_object_item_part_text_get
 
 #include <Elementary.h>
+#include <elm_entry_eo.h>
 
 #include "logger.h"
 #include "string_common.h"
 #include "editor.h"
 #include "signals.h"
+
+#ifdef HAVE_ENVENTOR
+   #ifndef ENVENTOR_BETA_API_SUPPORT
+      #define ENVENTOR_BETA_API_SUPPORT 1
+   #endif
+   #include <Enventor.h>
+#endif /* HAVE_ENVENTOR */
 
 #define EFLETE_INTERNAL_GROUP_NAME "___eflete_internal_group___"
 #define EFLETE_DUMMY_IMAGE_NAME "___eflete_dummy_image___.png"
@@ -150,7 +158,9 @@ struct _App_Data
                                        popup */
    Eina_Bool open_group : 1;
 #ifdef HAVE_ENVENTOR
-   Evas_Object *enventor;
+   Enventor_Item *it; // new API
+   Enventor_Object *obj; // new API
+   Evas_Object *enventor; // old API
    Eina_Bool enventor_mode : 1;
 #else
 #endif /* HAVE_ENVENTOR */

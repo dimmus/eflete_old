@@ -43,11 +43,13 @@ struct _Uns_List
 #define ENVENTOR_CODE_BG_COLOR 20,20,20
 #endif
 
+#include <stdbool.h>
 /* using enum instead of defines because of OSX */
-enum {
-   false = 0, //EINA_FALSE
-   true = 1, //EINA_TRUE
-} bool;
+// enum {
+//    false = 0, //EINA_FALSE
+//    true = 1, //EINA_TRUE
+// } bool;
+
 #define RETURN_VOID
 
 #ifdef SHOW_TODO

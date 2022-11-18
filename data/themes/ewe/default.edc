@@ -1,4 +1,6 @@
-data.item: "version" "110";
+efl_version: 1 26;
+
+data.item: "version" "126";
 
 collections {
    #include "macro.edc"

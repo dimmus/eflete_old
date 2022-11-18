@@ -112,8 +112,22 @@ app_init()
    ap.path.edj_path = eina_stringshare_printf("%s/themes/default/", elm_app_data_dir_get());
    ap.path.image_path = eina_stringshare_printf("%s/images/", elm_app_data_dir_get());
    ap.path.sound_path = eina_stringshare_printf("%s/sounds/", elm_app_data_dir_get());
-
-
+/*
+   printf("=== Check theme and data PATH ==== "); 
+   printf("\n theme_edj path: "); 
+   printf(ap.path.theme_edj); 
+   printf("\n ewe_edj path: "); 
+   printf(ap.path.ewe_edj); 
+   printf("\n layout_edj path: "); 
+   printf(ap.path.layout_edj); 
+   printf("\n edj_path: "); 
+   printf(ap.path.edj_path); 
+   printf("\n image_path: "); 
+   printf(ap.path.image_path);
+   printf("\n soung_path: "); 
+   printf(ap.path.sound_path);
+   printf("\n -- end ");   
+*/
    ap.theme = elm_theme_new();
 
 #ifndef _WIN32

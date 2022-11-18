@@ -20,11 +20,23 @@
 #define EFL_BETA_API_SUPPORT
 #define EFL_EO_API_SUPPORT
 
+// #define EFL_LAYOUT_CALC_PROTECTED
+// #define EFL_ACCESS_OBJECT_PROTECTED
+// #define EFL_ACCESS_TEXT_PROTECTED
+// #define EFL_ACCESS_EDITABLE_TEXT_PROTECTED
+// #define ELM_LAYOUT_PROTECTED
+// #define EFL_UI_FOCUS_OBJECT_PROTECTED
+// #define EFL_UI_WIDGET_FOCUS_MANAGER_PROTECTED 1
+// #define EFL_ACCESS_WIDGET_ACTION_PROTECTED
+// #define EFL_PART_PROTECTED
+
 #include "main_window.h"
 #include "project_manager2.h"
 #include "validator.h"
 #include "modal_window.h"
 #include "shortcuts.h"
+
+// #include <elm_entry_eo.h>
 
 #define STYLE_DEFAULT         "DEFAULT"
 #define STYLE_DEFAULT_VALUE "align=middle font=Sans font_size=24 color=#000000 "

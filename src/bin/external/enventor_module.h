@@ -20,10 +20,11 @@
 #ifndef ENVENTOR_MODULE_H
 #define ENVENTOR_MODULE_H
 
-TODO("check this define")
 #ifdef HAVE_ENVENTOR
-   #define ENVENTOR_BETA_API_SUPPORT
-   #include "Enventor.h"
+   #ifndef ENVENTOR_BETA_API_SUPPORT
+      #define ENVENTOR_BETA_API_SUPPORT 1
+   #endif
+   #include <Enventor.h>
 #endif /* HAVE_ENVENTOR */
 
 #include "eflete.h"
@@ -47,6 +48,8 @@ struct _Enventor_Data
     Eina_Stringshare *file; /**< exported edc file, which uses for enventor mode*/
     Eina_Stringshare *path; /**< path to exported style project*/
 };
+
+typedef struct _Enventor_Data Enventor_Data;
 
 /**
  * Function initialize enventor object. Register callbacks for

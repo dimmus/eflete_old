@@ -216,7 +216,9 @@ _tab_open_project_add(void)
 {
    Evas_Object *r_list, *r_grid;
    tab.layout = elm_layout_add(ap.win);
-   elm_layout_theme_set(tab.layout, "layout", "tab_home", "open_project");
+   if (!elm_layout_theme_set(
+         tab.layout, "layout", "tab_home", "open_project"))
+     ERR("Failed to set TAB_HOME layout \n");
    elm_layout_text_set(tab.layout, "elm.text.recent", _("Open recent"));
 
    tab.btn_clear = elm_button_add(ap.win);

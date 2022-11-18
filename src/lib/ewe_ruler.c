@@ -16,11 +16,18 @@
  * along with this program; If not, see www.gnu.org/licenses/lgpl.html.
  */
 
+
+#define EFL_UI_WIDGET_PROTECTED
+#define EFL_ACCESS_OBJECT_PROTECTED
+#define EFL_ACCESS_WIDGET_ACTION_PROTECTED
+#define ELM_LAYOUT_PROTECTED
+#define EFL_PART_PROTECTED
+
 #include "ewe_private.h"
 #include "ewe_widget_ruler.h"
 #undef EAPI
 #define EAPI
-#include "ewe_ruler_eo.h"
+#include "ewe_ruler.eo.h"
 
 #define MY_CLASS EWE_RULER_CLASS
 
@@ -258,7 +265,7 @@ _ewe_ruler_horizontal_set(Eo *obj,
 }
 
 EOLIAN static Eina_Bool
-_ewe_ruler_horizontal_get(Eo *obj EINA_UNUSED, Ewe_Ruler_Smart_Data *sd)
+_ewe_ruler_horizontal_get(const Eo *obj EINA_UNUSED, Ewe_Ruler_Smart_Data *sd)
 {
    return sd->horizontal;
 }
@@ -285,7 +292,7 @@ _ewe_ruler_step_set(Eo *obj,
 }
 
 EOLIAN static unsigned int
-_ewe_ruler_step_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_step_get(const Eo *obj EINA_UNUSED,
                     Ewe_Ruler_Smart_Data *sd,
                     Ewe_Ruler_Scale *scale)
 {
@@ -309,7 +316,7 @@ _ewe_ruler_value_step_set(Eo *obj,
 }
 
 EOLIAN static double
-_ewe_ruler_value_step_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_value_step_get(const Eo *obj EINA_UNUSED,
                           Ewe_Ruler_Smart_Data *sd,
                           Ewe_Ruler_Scale *scale)
 {
@@ -335,7 +342,7 @@ _ewe_ruler_zero_offset_set(Eo *obj,
 }
 
 EOLIAN static int
-_ewe_ruler_zero_offset_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_zero_offset_get(const Eo *obj EINA_UNUSED,
                            Ewe_Ruler_Smart_Data *sd,
                            Ewe_Ruler_Scale *scale)
 {
@@ -361,7 +368,7 @@ _ewe_ruler_format_set(Eo *obj,
 }
 
 EOLIAN static const char *
-_ewe_ruler_format_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_format_get(const Eo *obj EINA_UNUSED,
                       Ewe_Ruler_Smart_Data *sd,
                       Ewe_Ruler_Scale *scale)
 {
@@ -371,7 +378,7 @@ _ewe_ruler_format_get(Eo *obj EINA_UNUSED,
 }
 
 EOLIAN static Eina_Bool
-_ewe_ruler_style_set(Eo *obj,
+_ewe_ruler_ewe_style_set(Eo *obj,
                      Ewe_Ruler_Smart_Data *sd,
                      Ewe_Ruler_Scale *scale,
                      const char *style)
@@ -394,7 +401,7 @@ _ewe_ruler_style_set(Eo *obj,
 }
 
 EOLIAN static const char *
-_ewe_ruler_style_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_ewe_style_get(const Eo *obj EINA_UNUSED,
                      Ewe_Ruler_Smart_Data *sd,
                      Ewe_Ruler_Scale *scale)
 {
@@ -453,7 +460,7 @@ _ewe_ruler_scale_del(Eo *obj EINA_UNUSED,
 }
 
 EOLIAN static Eina_Bool
-_ewe_ruler_scale_visible_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_scale_visible_get(const Eo *obj EINA_UNUSED,
                              Ewe_Ruler_Smart_Data *sd,
                              Ewe_Ruler_Scale *scale)
 {
@@ -495,7 +502,7 @@ _ewe_ruler_scale_visible_set(Eo *obj EINA_UNUSED,
 }
 
 EOLIAN static Eina_Bool
-_ewe_ruler_scale_middle_mark_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_scale_middle_mark_get(const Eo *obj EINA_UNUSED,
                                  Ewe_Ruler_Smart_Data *sd,
                                  Ewe_Ruler_Scale *scale)
 {
@@ -597,7 +604,7 @@ _ewe_ruler_marker_size_set(Eo *obj,
 }
 
 EOLIAN static int
-_ewe_ruler_marker_size_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_marker_size_get(const Eo *obj EINA_UNUSED,
                            Ewe_Ruler_Smart_Data *sd EINA_UNUSED,
                            Ewe_Ruler_Marker *marker)
 {
@@ -614,7 +621,7 @@ _ewe_ruler_marker_text_set(Eo *obj EINA_UNUSED,
 }
 
 EOLIAN static const char *
-_ewe_ruler_marker_text_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_marker_text_get(const Eo *obj EINA_UNUSED,
                            Ewe_Ruler_Smart_Data *sd EINA_UNUSED,
                            Ewe_Ruler_Marker *marker)
 {
@@ -668,7 +675,7 @@ _ewe_ruler_marker_relative_set(Eo *obj,
 }
 
 EOLIAN static double
-_ewe_ruler_marker_relative_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_marker_relative_get(const Eo *obj EINA_UNUSED,
                                Ewe_Ruler_Smart_Data *sd,
                                Ewe_Ruler_Marker *marker,
                                Ewe_Ruler_Scale *scale)
@@ -709,7 +716,7 @@ _ewe_ruler_marker_absolute_set(Eo *obj,
 }
 
 EOLIAN static int
-_ewe_ruler_marker_absolute_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_marker_absolute_get(const Eo *obj EINA_UNUSED,
                                Ewe_Ruler_Smart_Data *sd EINA_UNUSED,
                                Ewe_Ruler_Marker *marker)
 {
@@ -721,7 +728,7 @@ _ewe_ruler_marker_absolute_get(Eo *obj EINA_UNUSED,
 }
 
 EOLIAN static Eina_Bool
-_ewe_ruler_marker_visible_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_marker_visible_get(const Eo *obj EINA_UNUSED,
                               Ewe_Ruler_Smart_Data *sd EINA_UNUSED,
                               Ewe_Ruler_Marker *marker)
 {
@@ -772,7 +779,7 @@ _ewe_ruler_marker_style_set(Eo *obj,
 }
 
 EOLIAN static const char *
-_ewe_ruler_marker_style_get(Eo *obj EINA_UNUSED,
+_ewe_ruler_marker_style_get(const Eo *obj EINA_UNUSED,
                             Ewe_Ruler_Smart_Data *sd EINA_UNUSED,
                             Ewe_Ruler_Marker *marker)
 {
@@ -783,13 +790,36 @@ _ewe_ruler_marker_style_get(Eo *obj EINA_UNUSED,
 /*------------------------Smart functions ----------------------------*/
 
 EOLIAN static void
-_ewe_ruler_efl_canvas_group_group_add(Eo *obj, Ewe_Ruler_Smart_Data *sd)
+// _ewe_ruler_efl_canvas_group_group_member_add(Eo *obj, Ewe_Ruler_Smart_Data *sd, Efl_Canvas_Object *member)
+_ewe_ruler_efl_canvas_group_group_member_add(Eo *obj, Ewe_Ruler_Smart_Data *sd, Efl_Canvas_Object *subobj)
 {
    const char *data_dir = NULL;
    Eina_Strbuf *theme_path = NULL;
+   
+   // NEW 18.11.22
+   // if (!subobj || (efl_canvas_object_render_parent_get(subobj) == obj))
+   //   {
+   //      ERR("subobj %p %s is already added to this", subobj, efl_class_name_get(subobj) );
+   //   }
 
+   // if (!efl_ui_widget_parent_get(obj))
+   //   {
+   //      if (!efl_ui_widget_sub_object_add(obj, subobj))
+   //        ERR("Nothing to ADD")
+   //   }
+
+   // efl_canvas_group_member_add(obj, subobj);
+   // efl_pack_layout_request(obj);
+
+   // NEW 26.10.22
+   // efl_canvas_group_member_add(efl_super(obj, MY_CLASS), member);
+   // if (sd->hit_rect) evas_object_raise(sd->hit_rect);
+   // efl_ui_widget_sub_object_add(obj, member);
+   
+   // OLD code. Save until above will be tested.
    efl_canvas_group_add(efl_super(obj, MY_CLASS));
-   elm_widget_sub_object_parent_add(obj);
+   // efl_ui_widget_focus_allow_set(obj, EINA_FALSE); // new
+   elm_widget_sub_object_parent_add(obj); 
 
    data_dir = elm_app_data_dir_get();
    if (data_dir && strcmp(data_dir, ""))
@@ -826,8 +856,9 @@ _ewe_ruler_efl_canvas_group_group_add(Eo *obj, Ewe_Ruler_Smart_Data *sd)
 }
 
 EOLIAN static void
-_ewe_ruler_efl_canvas_group_group_del(Eo *obj,
-                                 Ewe_Ruler_Smart_Data *sd)
+_ewe_ruler_efl_canvas_group_group_member_remove(Eo *obj,
+                                 Ewe_Ruler_Smart_Data *sd,
+                                 Efl_Canvas_Object *sub_obj EINA_UNUSED)
 {
    Ewe_Ruler_Scale *scale;
    Ewe_Ruler_Marker *marker;
@@ -846,13 +877,17 @@ _ewe_ruler_efl_canvas_group_group_del(Eo *obj,
    evas_object_del(sd->bg);
 
    free(sd->theme_file);
+   
+   efl_canvas_group_del(efl_super(obj, MY_CLASS)); // new
+   efl_canvas_group_member_remove(efl_super(obj, MY_CLASS), sub_obj);
+   efl_unref(obj);
 }
 
 static void
 _ewe_ruler_show(Eo* obj, Ewe_Ruler_Smart_Data *sd)
 {
    if (sd->ruler_visible) return;
-   efl_gfx_visible_set(efl_super(obj, MY_CLASS), EINA_TRUE);
+   efl_gfx_entity_visible_set(efl_super(obj, MY_CLASS), EINA_TRUE);
 
    Ewe_Ruler_Scale *scale;
    Ewe_Ruler_Marker *marker;
@@ -889,7 +924,7 @@ static void
 _ewe_ruler_hide(Eo* obj, Ewe_Ruler_Smart_Data *sd)
 {
    if (!sd->ruler_visible) return;
-   efl_gfx_visible_set(efl_super(obj, MY_CLASS), EINA_FALSE);
+   efl_gfx_entity_visible_set(efl_super(obj, MY_CLASS), EINA_FALSE);
 
    Ewe_Ruler_Scale *scale;
    Ewe_Ruler_Marker *marker;
@@ -913,7 +948,7 @@ _ewe_ruler_hide(Eo* obj, Ewe_Ruler_Smart_Data *sd)
 }
 
 EOLIAN static void
-_ewe_ruler_efl_gfx_visible_set(Eo *obj, Ewe_Ruler_Smart_Data *sd, Eina_Bool vis)
+_ewe_ruler_efl_gfx_entity_visible_set(Eo *obj, Ewe_Ruler_Smart_Data *sd, Eina_Bool vis)
 {
    if (_evas_object_intercept_call(obj, EVAS_OBJECT_INTERCEPT_CB_VISIBLE, 0, vis))
      return;
@@ -925,15 +960,16 @@ _ewe_ruler_efl_gfx_visible_set(Eo *obj, Ewe_Ruler_Smart_Data *sd, Eina_Bool vis)
 }
 
 EOLIAN static void
-_ewe_ruler_efl_gfx_position_set(Eo *obj,
+_ewe_ruler_efl_gfx_entity_position_set(Eo *obj,
                                 Ewe_Ruler_Smart_Data *sd,
-                                Evas_Coord x,
-                                Evas_Coord y)
+                                Eina_Position2D pos)
 {
+   int x = pos.x;
+   int y = pos.y;
    if (_evas_object_intercept_call(obj, EVAS_OBJECT_INTERCEPT_CB_MOVE, 0, x, y))
      return;
 
-   efl_gfx_position_set(efl_super(obj, MY_CLASS), x, y);
+   efl_gfx_entity_position_set(efl_super(obj, MY_CLASS), pos);
 
    evas_object_move(sd->clip, x, y);
    evas_object_move(sd->bg, x, y);
@@ -945,11 +981,12 @@ _ewe_ruler_efl_gfx_position_set(Eo *obj,
 }
 
 EOLIAN static void
-_ewe_ruler_efl_gfx_size_set(Eo *obj,
+_ewe_ruler_efl_gfx_entity_size_set(Eo *obj,
                             Ewe_Ruler_Smart_Data *sd,
-                            Evas_Coord w,
-                            Evas_Coord h)
+                            Eina_Size2D size)
 {
+   int w = size.w;
+   int h = size.h;
    if ((w == sd->geometry.width) && (h == sd->geometry.height)) return;
    if (_evas_object_intercept_call(obj, EVAS_OBJECT_INTERCEPT_CB_RESIZE, 0, w, h))
      return;
@@ -963,7 +1000,7 @@ _ewe_ruler_efl_gfx_size_set(Eo *obj,
 
    evas_object_smart_changed(obj);
 
-   efl_gfx_size_set(efl_super(obj, MY_CLASS), w, h);
+   efl_gfx_entity_size_set(efl_super(obj, MY_CLASS), size);
 }
 
 EOLIAN static void
@@ -1020,13 +1057,13 @@ _ewe_ruler_efl_canvas_group_group_calculate(Eo *obj EINA_UNUSED,
      }
 }
 
-EOLIAN static Elm_Theme_Apply
-_ewe_ruler_elm_widget_theme_apply(Eo *obj, Ewe_Ruler_Smart_Data *sd)
+EOLIAN static Eina_Error
+_ewe_ruler_efl_ui_widget_theme_apply(Eo *obj, Ewe_Ruler_Smart_Data *sd)
 {
-   Elm_Theme_Apply int_ret = ELM_THEME_APPLY_FAILED;
+   Eina_Error int_ret = EFL_UI_THEME_APPLY_ERROR_GENERIC;
    int count;
-   int_ret = elm_obj_widget_theme_apply(efl_super(obj, MY_CLASS));
-   if (int_ret == ELM_THEME_APPLY_FAILED) return ELM_THEME_APPLY_FAILED;
+   int_ret = efl_ui_widget_theme_apply(efl_super(obj, MY_CLASS));
+   if (int_ret == EFL_UI_THEME_APPLY_ERROR_GENERIC) return int_ret;
 
    Ewe_Ruler_Scale *scale;
    Eina_List *ls;

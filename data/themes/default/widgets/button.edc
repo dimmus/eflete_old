@@ -276,6 +276,9 @@ group { name: "elm/button/base/hoversel_vertical/entry";
          description {state: "default" 0.0;
             color: 0 0 0 0;
          }
+         description { state: "clicked" 0.0;
+            inherit: "default" 0.0;
+         }
       }
    }
 }
@@ -303,6 +306,9 @@ group { name: "elm/button/base/hoversel_vertical_entry/entry";
             color_class: "select";
          }
          description { state: "visible" 0.0;
+            inherit: "default" 0.00;
+         }
+         description { state: "focused" 0.0;
             inherit: "default" 0.00;
          }
       }

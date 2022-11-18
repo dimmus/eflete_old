@@ -14,9 +14,9 @@ LT_INIT([win32-dll disable-static pic-only])
 
 dnl m4_define([package], "EFL\ Edje\ Theme\ Editor")
 m4_define([efl_version], [1.19.2])
-m4_define([efl_version_max], [1.20.9999])
+m4_define([efl_version_max], [1.26.999])
 
-m4_define([enventor_version], [0.5.0])
+m4_define([enventor_version], [1.0.0])
 
 EWE_INIT
 EFLETE_INIT
@@ -258,7 +258,7 @@ echo "  efl............: ${have_efl} (version: ${efl_v})"
 echo ""
 echo "Features:"
 echo "  tizen..........: ${summary_tizen}"
-#dnl echo "  enventor.......: ${summary_enventor}"
+# echo "  enventor.......: ${summary_enventor}"
 echo ""
 echo "Binaries:"
 echo "  eolian_gen path..: ${eolian_gen}"

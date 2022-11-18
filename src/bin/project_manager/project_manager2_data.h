@@ -24,6 +24,8 @@
 #include <Eet.h>
 #include <Ecore_Evas.h>
 
+#include "enventor_module.h"
+
 /* don't forget to update on major changes */
 #define PROJECT_FILE_VERSION 5
 

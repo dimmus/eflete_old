@@ -1,3 +1,5 @@
+efl_version: 1 22;
+
 collections {
    #include "../macros.edc"
    #include "edje/editor_base.edc"
