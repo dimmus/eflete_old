@@ -30,8 +30,6 @@ if resolution is less not all UI componenets is displayed.
 Please note that some features may not quite function correctly or
 completely on EFL 1.26.99
 
-Please see http://www.enlightenment.org for information on these.
-
 ## Compiling:
 
 Once you have met requirements, compiling and installing is simple:
