@@ -1,0 +1,554 @@
+group { name: "elm/slider/hidden/limit";
+   parts {
+      part { name: "elm.units.min";
+         type: TEXT;
+         mouse_events: 0;
+         scale: 1;
+         description { state: "default" 0.0;
+            visible: 0;
+            align: 1.0 0.5;
+            fixed: 1 1;
+            text {
+               font: FN;
+               size: 10;
+               text_class: "slider_text";
+               min: 1 1;
+               align: 0.0 0.5;
+               ellipsis: -1.0;
+            }
+         }
+      }
+      part { name: "elm.units.max";
+         type: TEXT;
+         mouse_events: 0;
+         scale: 1;
+         description { state: "default" 0.0;
+            visible: 0;
+            align: 1.0 0.5;
+            fixed: 1 1;
+            color_class: "main";
+            text {
+               font: FN_B;
+               size: 10;
+               text_class: "slider_text";
+               min: 1 1;
+               align: 0.0 0.5;
+               ellipsis: -1.0;
+            }
+         }
+      }
+   }
+}
+
+group { name: "elm/slider/horizontal/indicator/default";
+   alias: "elm/slider/horizontal/indicator/disabled";
+   parts {
+      part { name: "base";
+         type: SPACER;
+         scale: 1;
+         description { state: "default" 0.0;
+            fixed: 1 1;
+            min: 16 16;
+         }
+      }
+      part { name: "clip";
+         type: RECT;
+         description { state: "default" 0.0;
+            visible: 0;
+            fixed: 1 1;
+            rel1 {
+               offset: -100 -100;
+               to: "elm.indicator";
+            }
+            rel2 {
+               offset: 99 99;
+               to: "elm.indicator";
+            }
+         }
+         description { state: "visible" 0.0;
+            fixed: 1 1;
+            rel1 {
+               offset: -100 -100;
+               to: "elm.indicator";
+            }
+            rel2 {
+               offset: 99 99;
+               to: "elm.indicator";
+            }
+         }
+      }
+      part { name: "bevel";
+         type: RECT;
+         mouse_events: 0;
+         clip_to: "clip";
+         description { state: "default" 0.0;
+            visible: 0;
+            rel1 {
+               offset: -12 -12;
+               to: "elm.indicator";
+            }
+            rel2 {
+               offset: 11 11;
+               to: "elm.indicator";
+            }
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.0;
+         }
+      }
+      part { name: "elm.indicator";
+         type: TEXT;
+         mouse_events: 0;
+         scale: 1;
+         clip_to: "clip";
+         effect: SHADOW BOTTOM;
+         description { state: "default" 0.0;
+            visible: 0;
+            align: 0.5 1.0;
+            fixed: 1 1;
+            color_class: "slider_indicator";
+            rel1 {
+               relative: 0.0 -0.1;
+               offset: 0 -12;
+               to: "base";
+            }
+            rel2 {
+               relative: 1.0 -0.1;
+               offset: -1 -12;
+               to: "base";
+            }
+            text {
+               font: FN_B;
+               size: 10;
+               text_class: "slider_indicator";
+               min: 1 1;
+               align: 0.5 1.0;
+               ellipsis: -1.0;
+            }
+         }
+         description { state: "visible" 0.0;
+            align: 0.5 1.0;
+            fixed: 1 1;
+            color_class: "slider_indicator";
+            rel1 {
+               relative: 0.0 -0.1;
+               offset: 0 -12;
+               to: "base";
+            }
+            rel2 {
+               relative: 1.0 -0.1;
+               offset: -1 -12;
+               to: "base";
+            }
+            text {
+               font: FN_B;
+               size: 10;
+               text_class: "slider_indicator";
+               min: 1 1;
+               align: 0.5 1.0;
+               ellipsis: -1.0;
+            }
+         }
+      }
+   }
+   programs {
+      program { name: "program_0xf2cd80";
+         signal: "elm,popup,show";
+         source: "elm";
+         action: STATE_SET "visible" 0.00;
+         target: "elm.indicator";
+         target: "bevel";
+      }
+      program { name: "program_0xf2d280";
+         signal: "elm,popup,hide";
+         source: "elm";
+         action: STATE_SET "default" 0.00;
+         target: "elm.indicator";
+         target: "bevel";
+      }
+      program { name: "program_0xf2d780";
+         signal: "elm,popup,hide";
+         source: "elm";
+         action: SIGNAL_EMIT "elm,popup,hide,done" "elm";
+      }
+      program { name: "program_0xf2d980";
+         signal: "elm,state,val,show";
+         source: "elm";
+         action: STATE_SET "visible" 0.00;
+         target: "clip";
+      }
+      program { name: "program_0xf2dcd0";
+         signal: "elm,state,val,hide";
+         source: "elm";
+         action: STATE_SET "default" 0.00;
+         target: "clip";
+      }
+      program { name: "program_0xf2e030";
+         signal: "elm,state,indicator,show";
+         source: "elm";
+         action: STATE_SET "visible" 0.00;
+         target: "elm.indicator";
+         target: "bevel";
+      }
+      program { name: "program_0xf2e550";
+         signal: "elm,state,indicator,hide";
+         source: "elm";
+         action: STATE_SET "visible" 0.00;
+         target: "elm.indicator";
+         target: "bevel";
+      }
+      program { name: "program_0xf2ea60";
+         signal: "elm,state,disabled";
+         source: "elm";
+         action: STATE_SET "disabled" 0.00;
+         target: "base";
+      }
+      program { name: "program_0xf2edd0";
+         signal: "elm,state,enabled";
+         source: "elm";
+         action: STATE_SET "default" 0.00;
+         target: "base";
+      }
+   }
+}
+
+group { name: "elm/slider/horizontal/default";
+   parts {
+      alias: "elm.units.max" "limits:elm.units.max";
+      alias: "elm.units.min" "limits:elm.units.min";
+      part { name: "elm.swallow.bar";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 100 14;
+            rel1 {
+               relative: 1.0 0.0;
+               offset: 4 0;
+               to_x: "elm.text";
+            }
+            rel2 {
+               relative: 0.0 1.0;
+               offset: -4 -1;
+               to_x: "limits";
+            }
+         }
+      }
+      part { name: "base";
+         type: RECT;
+         clip_to: "dis_clip";
+         description { state: "default" 0.0;
+            min: 100 1;
+            max: -1 1;
+            color: 174 174 174 255;
+            rel1 {
+               offset: 2 0;
+               to_x: "elm.swallow.bar";
+            }
+            rel2 {
+               offset: -3 -1;
+               to_x: "elm.swallow.bar";
+            }
+         }
+      }
+      part { name: "limits";
+         type: GROUP;
+         source: "elm/slider/hidden/limit";
+         description { state: "default" 0.0;
+            visible: 0;
+            align: 1.0 0.5;
+            fixed: 1 0;
+            rel1.to_x: "elm.swallow.end";
+            rel2 {
+               relative: 0.0 1.0;
+               to_x: "elm.swallow.end";
+            }
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.00;
+            visible: 0;
+            rel1.offset: -3 0;
+            rel2.offset: -3 -1;
+         }
+      }
+      part { name: "elm.swallow.end";
+         type: SWALLOW;
+         description { state: "default" 0.0;
+            visible: 0;
+            align: 1.0 0.5;
+            fixed: 1 0;
+            rel1.relative: 1.0 0.0;
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.00;
+            visible: 1;
+            max: 16 16;
+            aspect: 1.0 1.0;
+         }
+      }
+      part { name: "elm.swallow.icon";
+         type: SWALLOW;
+         description { state: "default" 0.0;
+            visible: 0;
+            align: 0.0 0.5;
+            fixed: 1 0;
+            rel1.to_y: "elm.swallow.bar";
+            rel2 {
+               relative: 0.0 1.0;
+               to_y: "elm.swallow.bar";
+            }
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.00;
+            visible: 1;
+            max: 16 16;
+            aspect: 1.0 1.0;
+            rel2.relative: 1.0 1.0;
+         }
+      }
+      part { name: "elm.units";
+         type: TEXT;
+         mouse_events: 0;
+         scale: 1;
+         clip_to: "dis_clip";
+         effect: SHADOW BOTTOM;
+         description { state: "default" 0.0;
+            visible: 0;
+            fixed: 1 1;
+            color_class: "genlist_text_tree";
+            text {
+               text: "elm.text";
+               font: FN;
+               size: 10;
+               min: 1 1;
+               align: 1.0 0.5;
+               ellipsis: -1.0;
+            }
+            rel1.to_x: "limits";
+            rel2.to_x: "limits";
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.00;
+            visible: 1;
+            align: 1.0 0.5;
+            text {
+               text: "";
+               size: 13;
+            }
+         }
+      }
+      part { name: "elm.text";
+         type: TEXT;
+         mouse_events: 0;
+         scale: 1;
+         clip_to: "dis_clip";
+         effect: SHADOW BOTTOM;
+         description { state: "default" 0.0;
+            visible: 0;
+            fixed: 1 0;
+            color_class: "genlist_text_tree";
+            text {
+               font: FN;
+               size: 13;
+            }
+            rel1 {
+               relative: 1.0 0.0;
+               offset: 4 0;
+               to_x: "elm.swallow.icon";
+            }
+            rel2.to_x: "elm.swallow.icon";
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.00;
+            visible: 1;
+            align: 0.0 0.5;
+            text {
+               min: 1 1;
+               align: 0.0 0.5;
+               ellipsis: -1.0;
+            }
+         }
+      }
+      part { name: "dis_clip";
+         type: RECT;
+         description { state: "default" 0.0;
+         }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.00;
+         }
+      }
+      part { name: "button";
+         type: GROUP;
+         source: "elm/slider/horizontal/indicator/default";
+         description { state: "default" 0.0;
+            fixed: 1 1;
+            rel1.to: "elm.dragable.slider";
+            rel2.to: "elm.dragable.slider";
+         }
+         description { state: "hidden" 0.0;
+            inherit: "default" 0.00;
+            visible: 0;
+         }
+      }
+      part { name: "elm.track.slider";
+         type: SWALLOW;
+         description { state: "default" 0.0;
+            max: 0 0;
+            rel1.to: "elm.dragable.slider";
+            rel2.to: "elm.dragable.slider";
+         }
+      }
+      part { name: "elm.dragable.slider";
+         type: RECT;
+         scale: 1;
+         dragable {
+            x: 1 1 0;
+            y: 0 0 0;
+            confine: "elm.swallow.bar";
+         }
+         description { state: "default" 0.0;
+            min: 7 14;
+            max: 7 14;
+            color: 0 0 0 0;
+         }
+      }
+      part { name: "draggable.button";
+         type: RECT;
+         repeat_events: 1;
+         ignore_flags: "ON_HOLD";
+         clip_to: "dis_clip";
+         description { state: "default" 0.0;
+            color_class: "genlist_selected";
+            rel1.to: "elm.dragable.slider";
+            rel2.to: "elm.dragable.slider";
+         }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.00;
+            color_class: "border";
+         }
+      }
+      part { name: "event";
+         type: RECT;
+         description { state: "default" 0.0;
+            visible: 0;
+            color: 255 255 255 0;
+         }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.00;
+            visible: 1;
+         }
+      }
+   }
+   programs {
+      program { name: "popup_signal_emit_show";
+         signal: "elm,state,indicator,show";
+         source: "elm";
+         action: SIGNAL_EMIT "elm,popup,show" "elm";
+         after: "popup_show";
+      }
+      program { name: "popup_signal_emit_hide";
+         signal: "elm,state,indicator,hide";
+         source: "elm";
+         action: SIGNAL_EMIT "elm,popup,hide" "elm";
+         after: "popup_hide";
+      }
+      program { name: "button_click";
+         signal: "mouse,down,1";
+         source: "button";
+         action: SIGNAL_EMIT "elm,popup,show" "elm";
+         after: "popup_show";
+      }
+      program { name: "button_unclick";
+         signal: "mouse,up,1";
+         source: "button";
+         action: SIGNAL_EMIT "elm,popup,hide" "elm";
+         after: "popup_hide";
+      }
+      program { name: "limits_show";
+         signal: "elm,state,units,visible";
+         source: "elm";
+         action: SIGNAL_EMIT "limits,visible" "elm";
+      }
+      program { name: "limits_hide";
+         signal: "elm,state,units,hidden";
+         source: "elm";
+         action: SIGNAL_EMIT "limits,hide" "elm";
+      }
+      program { name: "popup_show";
+         signal: "mouse,up,1";
+         source: "elm.dragable.slider";
+         action: STATE_SET "hidden" 0.00;
+         target: "button";
+      }
+      program { name: "popup_hide";
+         signal: "mouse,down,1";
+         source: "elm.dragable.slider";
+         action: STATE_SET "default" 0.00;
+         target: "button";
+      }
+      program { name: "text_show";
+         signal: "elm,state,text,visible";
+         source: "elm";
+         action: STATE_SET "visible" 0.00;
+         target: "elm.text";
+      }
+      program { name: "text_hide";
+         signal: "elm,state,text,hidden";
+         source: "elm";
+         action: STATE_SET "default" 0.00;
+         target: "elm.text";
+      }
+      program { name: "disable";
+         signal: "elm,state,disabled";
+         source: "elm";
+         action: STATE_SET "disabled" 0.00;
+         target: "dis_clip";
+         target: "event";
+         target: "draggable.button";
+      }
+      program { name: "enable";
+         signal: "elm,state,enabled";
+         source: "elm";
+         action: STATE_SET "default" 0.00;
+         target: "dis_clip";
+         target: "event";
+         target: "draggable.button";
+      }
+      program { name: "icon_show";
+         signal: "elm,state,icon,visible";
+         source: "elm";
+         action: STATE_SET "visible" 0.00;
+         target: "elm.swallow.icon";
+      }
+      program { name: "icon_hide";
+         signal: "elm,state,icon,hidden";
+         source: "elm";
+         action: STATE_SET "default" 0.00;
+         target: "elm.swallow.icon";
+      }
+      program { name: "end_hide";
+         signal: "elm,state,end,hidden";
+         source: "elm";
+         action: STATE_SET "default" 0.00;
+         target: "elm.swallow.end";
+      }
+      program { name: "end_show";
+         signal: "elm,state,end,visible";
+         source: "elm";
+         action: STATE_SET "visible" 0.00;
+         target: "elm.swallow.end";
+      }
+      program { name: "units_show";
+         signal: "elm,state,units,visible";
+         source: "elm";
+         action: STATE_SET "visible" 0.00;
+         target: "elm.units";
+      }
+      program { name: "units_hide";
+         signal: "elm,state,units,hidden";
+         source: "elm";
+         action: STATE_SET "default" 0.00;
+         target: "elm.units";
+      }
+   }
+}
+

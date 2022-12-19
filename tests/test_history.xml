@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2022-12-06 14:05:11</datetime>
+  <suite>
+    <title>history_test</title>
+    <test result="success">
+      <path>../tests/test_history</path>
+      <fn>history_add.c:58</fn>
+      <id>history_add_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000800</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_history</path>
+      <fn>history_del.c:52</fn>
+      <id>history_del_test_p1</id>
+      <iteration>0</iteration>
+      <duration>0.000875</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_history</path>
+      <fn>history_del.c:87</fn>
+      <id>history_del_test_p2</id>
+      <iteration>0</iteration>
+      <duration>0.000423</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_history</path>
+      <fn>history_change_add.c:53</fn>
+      <id>history_change_add_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000412</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_history</path>
+      <fn>history_undo_redo.c:115</fn>
+      <id>history_undo_redo_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000446</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.017460</duration>
+</testsuites>

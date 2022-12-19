@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2022-12-06 14:05:11</datetime>
+  <suite>
+    <title>change_test</title>
+    <test result="success">
+      <path>../tests/test_change</path>
+      <fn>change_add.c:55</fn>
+      <id>change_add_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000441</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_change</path>
+      <fn>change_free.c:51</fn>
+      <id>change_free_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000000</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_change</path>
+      <fn>change_diff_add.c:137</fn>
+      <id>change_diff_add_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000417</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_change</path>
+      <fn>change_diff_merge_add.c:114</fn>
+      <id>change_diff_merge_add_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000408</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.012142</duration>
+</testsuites>

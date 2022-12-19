@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2022-12-06 14:05:11</datetime>
+  <suite>
+    <title>logger_test</title>
+    <test result="success">
+      <path>../tests/test_logger</path>
+      <fn>logger_init.c:56</fn>
+      <id>logger_init_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000351</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_logger</path>
+      <fn>logger_shutdown.c:58</fn>
+      <id>logger_shutdown_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.000352</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.002597</duration>
+</testsuites>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2022-12-06 14:05:12</datetime>
+  <suite>
+    <title>cursor_test</title>
+    <test result="success">
+      <path>../tests/test_cursor</path>
+      <fn>cursor_main_set.c:59</fn>
+      <id>cursor_main_set_test_p1</id>
+      <iteration>0</iteration>
+      <duration>0.082012</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_cursor</path>
+      <fn>cursor_main_set.c:92</fn>
+      <id>cursor_main_set_test_p2</id>
+      <iteration>0</iteration>
+      <duration>0.086310</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_cursor</path>
+      <fn>cursor_main_get.c:61</fn>
+      <id>cursor_main_get_test_p1</id>
+      <iteration>0</iteration>
+      <duration>0.102456</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_cursor</path>
+      <fn>cursor_main_get.c:95</fn>
+      <id>cursor_main_get_test_p2</id>
+      <iteration>0</iteration>
+      <duration>0.074795</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_cursor</path>
+      <fn>cursor_type_set.c:59</fn>
+      <id>cursor_type_set_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.091361</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>../tests/test_cursor</path>
+      <fn>cursor_type_get.c:60</fn>
+      <id>cursor_type_get_test_p</id>
+      <iteration>0</iteration>
+      <duration>0.083289</duration>
+      <description>TCase</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.540547</duration>
+</testsuites>
