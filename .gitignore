@@ -79,15 +79,6 @@ __pycache__
 /src/lib/ecore_x/ecore_x_vsync
 Session.vim
 /elm_intro.h
-/src/modules/evas/engines/gl_common/shader_3d/evas_3d_shaders.x
-/src/scripts/eo/eo_debug
-/src/bin/ecore_con/efl_net_proxy_helper
-/src/bin/efl_wl/efl_wl_test
-/src/bin/efl_wl/efl_wl_test_stack
-
-#wayland generated protocol - some legacy headers will be ignored
-*-protocol.h
-*-protocol.c
 
 /build
 .cproject
@@ -98,4 +89,17 @@ efl_libs.csv
 .uuid
 
 /autom4te.cache/
+eflete_config.*
+eflete_config.h.in
+Makefile
+*.desktop
+*.eet
 
+/src/bin/eflete
+/src/bin/eflete_exporter
+
+Doxyfile
+POTFILES
+
+/tests/*_test
+/tests/*.xml
