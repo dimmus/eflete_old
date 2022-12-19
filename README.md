@@ -12,6 +12,10 @@
 </p>
 <br/>
 
+<p align="center">
+  <i>Work in progress! Limited functionality.</i>
+</p>
+
 Efl Edje Theme Editor is a rich graphical tool, that provide UI for edc markup.
 It is aimed to simplify creation and editing widgets styles. No one, for sure,
 want to learn EDC syntax. Eflete was designed with mind, that target users are
