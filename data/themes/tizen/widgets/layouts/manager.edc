@@ -1,0 +1,420 @@
+group { name: "elm/layout/manager/internal";
+   parts {
+      part { name: "elm.text";
+         type: TEXT;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            fixed: 0 1;
+            max: -1 13;
+            color_class: "genlist_text_tree";
+            text {
+               font: "Breeze";
+               size: 13;
+               min: 1 0;
+               max: 1 0;
+               ellipsis: -1;
+            }
+            rel1.to_x: "border";
+            rel2.to_x: "border";
+         }
+      }
+      part { name: "border";
+         type: RECT;
+         description { state: "default" 0.0;
+            align: 0.5 0.0;
+            min: 549 480;
+            max: 549 480;
+            color_class: "manager_content_border";
+            rel1 {
+               relative: 0.0 1.0;
+               offset: 0 8;
+               to_y: "elm.text";
+            }
+         }
+      }
+      part { name: "bg";
+         type: RECT;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            fixed: 1 1;
+            rel1 {
+               offset: 1 1;
+               to: "border";
+            }
+            rel2 {
+               offset: -2 -2;
+               to: "border";
+            }
+         }
+      }
+      part { name: "elm.swallow.preview";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            fixed: 1 1;
+            min: 0 171;
+            max: -1 171;
+            rel1.to: "bg";
+            rel2.to: "bg";
+         }
+      }
+      part { name: "preview_bottom_line";
+         type: RECT;
+         description { state: "default" 0.0;
+            align: 0.5 1.0;
+            fixed: 0 1;
+            min: 0 2;
+            max: -1 2;
+            color_class: "separator";
+            rel1 {
+               to_x: "bg";
+               to_y: "elm.swallow.preview";
+            }
+            rel2 {
+               to_x: "bg";
+               to_y: "elm.swallow.preview";
+            }
+         }
+      }
+      part { name: "elm.swallow.search";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            min: 466 24;
+            max: 466 24;
+            fixed: 1 1;
+            rel1 {
+               relative: 0.0 1.0;
+               offset: 11 10;
+               to_x: "bg";
+               to_y: "preview_bottom_line";
+            }
+            rel2 {
+               relative: 0.0 1.0;
+               offset: -10 0;
+               to: "bg";
+            }
+         }
+      }
+      part { name: "border_list";
+         type: RECT;
+         description { state: "default" 0.0;
+            align: 0.5 0.0;
+            min: 0 249;
+            max: -1 249;
+            color_class: "manager_content_border";
+            rel1 {
+               relative: 0.0 1.0;
+               offset: 12 5;
+               to_x: "bg";
+               to_y: "elm.swallow.search";
+            }
+            rel2 {
+               offset: -12 -1;
+               to: "bg";
+            }
+         }
+      }
+      part { name: "bg_list";
+         type: RECT;
+         description { state: "default" 0.0;
+            rel1 {
+               offset: 1 1;
+               to: "border_list";
+            }
+            rel2 {
+               offset: -2 -2;
+               to: "border_list";
+            }
+         }
+      }
+      part { name: "elm.swallow.list";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 1.0 0.0;
+            fixed: 1 1;
+            min: 0 247;
+            max: -1 247;
+            rel1.to: "bg_list";
+            rel2.to: "bg_list";
+         }
+      }
+      part { name: "elm.swallow.btn_del";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.5;
+            fixed: 1 1;
+            min: 24 24;
+            max: 24 24;
+            rel1 {
+               relative: 1.0 0.0;
+               offset: 5 0;
+               to_x: "elm.swallow.btn_add";
+               to_y: "elm.swallow.search";
+            }
+            rel2 {
+               to_x: "elm.swallow.btn_add";
+               to_y: "elm.swallow.search";
+            }
+         }
+      }
+      part { name: "elm.swallow.btn_add";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.5;
+            fixed: 1 1;
+            min: 24 24;
+            max: 24 24;
+            rel1 {
+               relative: 1.0 0.0;
+               offset: 9 0;
+               to: "elm.swallow.search";
+            }
+            rel2 {
+               relative: 0.0 1.0;
+               to: "elm.swallow.search";
+            }
+         }
+      }
+   }
+}
+
+group { name: "elm/layout/manager/preview";
+   parts {
+      part {
+         name: "elm.swallow.background";
+         type: SWALLOW;
+         description {
+            state: "default" 0.0;
+            rel1.relative: 0.0 0.0;
+            rel2.relative: 1.0 1.0;
+         }
+      }
+      part {
+         name: "elm.swallow.entry";
+         type: SWALLOW;
+         description {
+            state: "default" 0.0;
+            visible: 0;
+            rel1.to: "elm.swallow.background";
+            rel2.to: "elm.swallow.background";
+         }
+         description {
+            state: "visible" 0.0;
+            inherit: "default" 0.0;
+            visible: 1;
+         }
+      }
+   }
+   programs {
+      program {
+         name: "entry_show";
+         signal: "entry,show";
+         source: "eflete";
+         action: STATE_SET "visible" 0.0;
+         target: "elm.swallow.entry";
+      }
+      program {
+         name: "entry_hide";
+         signal: "entry,hide";
+         source: "eflete";
+         action: STATE_SET "default" 0.0;
+         target: "elm.swallow.entry";
+      }
+   }
+}
+group { name: "elm/layout/manager/property";
+   parts {
+      part { name: "elm.text";
+         type: TEXT;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            fixed: 0 1;
+            max: -1 13;
+            color_class: "genlist_text_tree";
+            text {
+               font: "Breeze";
+               size: 13;
+               max: 1 0;
+            }
+            rel1.to_x: "border";
+            rel2.to_x: "border";
+         }
+      }
+      part { name: "border";
+         type: RECT;
+         description { state: "default" 0.0;
+            align: 0.5 0.0;
+            min: 400 480;
+            max: 400 -1;
+            color_class: "manager_content_border";
+            rel1 {
+               relative: 0.0 1.0;
+               offset: 0 8;
+               to_y: "elm.text";
+            }
+         }
+      }
+      part { name: "bg";
+         type: RECT;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            fixed: 1 1;
+            rel1 {
+               offset: 1 1;
+               to: "border";
+            }
+            rel2 {
+               offset: -2 -2;
+               to: "border";
+            }
+         }
+      }
+      part { name: "elm.swallow.content";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.0;
+            align: 0.0 0.0;
+            fixed: 1 1;
+            min: 0 171;
+            rel1.to: "bg";
+            rel2.to: "bg";
+         }
+      }
+   }
+}
+
+group { name: "elm/layout/image_manager/image_set";
+   parts {
+      part { name: "border";
+         type: RECT;
+         description { state: "default" 0.00;
+            align: 0.50 0.00;
+            max: -1 171;
+            color_class: "manager_content_border";
+         }
+      }
+      part { name: "bg";
+         type: RECT;
+         scale: 1;
+         description { state: "default" 0.00;
+            align: 0.00 0.00;
+            fixed: 1 1;
+            rel1 {
+               offset: 1 1;
+               to: "border";
+            }
+            rel2 {
+               offset: -2 -2;
+               to: "border";
+            }
+         }
+      }
+      part { name: "elm.swallow.search";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.00;
+            align: 0.00 0.00;
+            fixed: 1 1;
+            min: 466 24;
+            max: 466 24;
+            rel1 {
+               offset: 0 10;
+               to_x: "bg";
+            }
+            rel2 {
+               relative: 0.00 1.00;
+               offset: -10 0;
+               to: "bg";
+            }
+         }
+      }
+      part { name: "border_list";
+         type: RECT;
+         description { state: "default" 0.00;
+            align: 0.50 0.00;
+            color_class: "manager_content_border";
+            rel1 {
+               relative: 0.00 1.00;
+               offset: 0 5;
+               to_x: "bg";
+               to_y: "elm.swallow.search";
+            }
+            rel2.to: "bg";
+         }
+      }
+      part { name: "bg_list";
+         type: RECT;
+         description { state: "default" 0.00;
+            rel1 {
+               offset: 1 1;
+               to: "border_list";
+            }
+            rel2 {
+               offset: -2 -2;
+               to: "border_list";
+            }
+         }
+      }
+      part { name: "elm.swallow.list";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.00;
+            align: 1.00 0.00;
+            fixed: 1 1;
+            rel1.to: "bg_list";
+            rel2.to: "bg_list";
+         }
+      }
+      part { name: "elm.swallow.btn_del";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.00;
+            align: 1.00 0.50;
+            fixed: 1 1;
+            min: 24 24;
+            max: 24 24;
+            rel1 {
+               relative: 1.00 0.00;
+               to_x: "border_list";
+               to_y: "elm.swallow.search";
+            }
+            rel2 {
+               to_x: "border_list";
+               to_y: "elm.swallow.search";
+            }
+         }
+      }
+      part { name: "elm.swallow.btn_add";
+         type: SWALLOW;
+         scale: 1;
+         description { state: "default" 0.00;
+            align: 1.00 0.50;
+            fixed: 1 1;
+            min: 24 24;
+            max: 24 24;
+            rel1 {
+               relative: 1.00 0.00;
+               to_x: "elm.swallow.btn_del";
+               to_y: "elm.swallow.search";
+            }
+            rel2 {
+               relative: 0.00 1.00;
+               offset: -10 -1;
+               to_x: "elm.swallow.btn_del";
+               to_y: "elm.swallow.search";
+            }
+         }
+      }
+   }
+}
+
