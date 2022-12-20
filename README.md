@@ -32,7 +32,7 @@ For comfortable work with Eflete your monitor should have the HD (1366x768) reso
    * efl (>= 1.23.3 && < 1.26.99)
 
 Please note that some features may not quite function correctly or
-completely on EFL 1.26.99
+completely!
 
 ## Compiling
 
