@@ -1,7 +1,7 @@
 <h1 align="center">EFLETE (EFL Edge Theme Editor)</h1>
 
 <p align="center">
-  <img src="./data/images/eflete.ico" border="0"></>
+  <img src="./data/images/eflete.svg" width="300" height="300" border="0"></>
 </p>
 
 <br/>
@@ -11,6 +11,10 @@
   <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2022?style=for-the-badge">
 </p>
 <br/>
+
+<p align="center">
+  <i>Work in progress! Limited functionality.</i>
+</p>
 
 Efl Edje Theme Editor is a rich graphical tool, that provide UI for edc markup.
 It is aimed to simplify creation and editing widgets styles. No one, for sure,
@@ -28,7 +32,7 @@ For comfortable work with Eflete your monitor should have the HD (1366x768) reso
    * efl (>= 1.23.3 && < 1.26.99)
 
 Please note that some features may not quite function correctly or
-completely on EFL 1.26.99
+completely!
 
 ## Compiling
 
